@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The origin — Theos</title>
+<meta name="description" content="Why Theos exists. A journey from the first act of creation to design with intelligence.">
+<meta property="og:title" content="The origin — Theos">
+<meta property="og:description" content="Why Theos exists. A journey from the first act of creation to design with intelligence.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23F36D1F'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/colors.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/typography.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/radius.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/motion.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/layout.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/base.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="pg">
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav scrolled" aria-label="Primary">
+  <div class="wrap">
+    <a class="nav-logo" href="index.html" aria-label="Theos home">
+      <img src="assets/logo-light.svg" alt="theos">
+    </a>
+    
+    <div class="nav-right">
+      <button class="icon-btn" id="sound-toggle" type="button" aria-label="Toggle ambient sound">
+        <svg class="on" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 5.5V9.5H4.5L8 12.5V2.5L4.5 5.5H2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M10.5 5C11.4 5.9 11.4 9.1 10.5 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <svg class="off" width="15" height="15" viewBox="0 0 15 15" fill="none" style="display:none"><path d="M2 5.5V9.5H4.5L8 12.5V2.5L4.5 5.5H2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M10.5 5.5L13.5 9.5M13.5 5.5L10.5 9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+      </button>
+      <a class="btn btn-solid btn-sm magnetic" href="contact.html">Start a project</a>
+    </div>
+  </div>
+</nav>
+
+<main class="og">
+  <canvas id="origin-gl" aria-hidden="true"></canvas>
+  <div class="og-track" id="origin-track">
+    <section class="og-ch og-open" data-screen-label="Origin hero">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>The origin</p>
+        <h1 class="rl">&Theta;&Epsilon;&Omicron;&Sigma;</h1>
+        <p class="og-body rl">From the Ancient Greek. The timeless spirit of creation. Not a religion &mdash; a lineage. Scroll to travel it.</p>
+        <p class="og-hint rl">Scroll</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 01">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 01 — Before</p>
+        <h2 class="rl">Before products. Before screens.</h2>
+        <p class="og-body rl">Only ideas existed. Everything that has ever been built began the same way &mdash; as a thought someone refused to abandon.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 02">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 02 — Civilization</p>
+        <h2 class="rl">Then humanity started building.</h2>
+        <p class="og-body rl">Temples. Bridges. Cities. Every civilization is remembered by what its makers left behind.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 03">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 03 — Wisdom</p>
+        <h2 class="rl">First, understanding.</h2>
+        <p class="og-body rl">Strategy before stone. The ancients measured twice and carved once. Design thinking is not new &mdash; it is ancient discipline with a new name.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 04">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 04 — Creation</p>
+        <h2 class="rl">Then, the forge.</h2>
+        <p class="og-body rl">Engineering turns intention into matter. Stone cracks. Energy flows beneath. What was carved is now built.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 05">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 05 — Communication</p>
+        <h2 class="rl">Then, connection.</h2>
+        <p class="og-body rl">A creation that cannot speak to people is a monument, not a product. Interaction is the messenger.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 06">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 06 — Harmony</p>
+        <h2 class="rl">Then, balance.</h2>
+        <p class="og-body rl">Proportion. Rhythm. Restraint. Beauty is not decoration &mdash; it is order made visible.</p>
+      </div>
+    </section>
+
+    <section class="og-ch" data-screen-label="Origin 07">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 07 — Evolution</p>
+        <h2 class="rl">Stone becomes signal.</h2>
+        <p class="og-body rl">Polygons. Wireframes. Interfaces. Neural networks. The materials changed. The discipline never did.</p>
+      </div>
+    </section>
+    <section class="og-ch og-final" data-screen-label="Origin finale">
+      <div class="wrap og-copy" data-reveal>
+        <p class="t-micro rl"><span class="sq"></span>Chapter 08 — Theos</p>
+        <h2 class="rl">Inspired by timeless creation.<br>Crafted for tomorrow.</h2>
+        <p class="og-body rl">We continue the lineage in the digital world. Not interfaces &mdash; experiences built to stand the test of time.</p>
+        <div class="hero-cta rl" style="margin-top:36px;">
+          <a class="btn btn-solid magnetic" data-cursor="Book" href="mailto:hello@theos.design?subject=Discovery%20call">Book a discovery call</a>
+          <a class="btn btn-ghost magnetic" href="work.html">See the work<span class="arr">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="fh"><span class="sq" style="display:inline-block;width:8px;height:8px;background:var(--ember);margin-right:10px;"></span>Theos</p>
+        <p class="foot-desc">An AI-first digital product studio. Strategy, design, engineering and growth, delivered as one discipline.</p>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Studio</p>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a>
+      <a href="insights.html">Insights</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>Careers<span class="soon">Opening soon</span></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@theos.design">hello@theos.design</a></li>
+          <li><a href="mailto:theosdesignstudio@gmail.com">theosdesignstudio@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/theosdesignstudio" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/theosdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Newsletter</p>
+        <p class="foot-desc" style="margin-bottom:16px;">One considered email, occasionally. No noise.</p>
+        <form class="news-form" id="news-form">
+          <input type="email" placeholder="you@company.com" aria-label="Email address">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-mark foot-harp-wrap" aria-hidden="true">
+      <canvas class="foot-harp"></canvas>
+      <p class="harp-hint t-micro">Run your cursor across the wires</p>
+    </div>
+    <div class="foot-legal">
+      <span>&copy; <span id="year">2026</span> Theos. New Delhi &middot; London.</span>
+      <span><a href="https://theos.design" target="_blank" rel="noopener">theos.design</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/image-slot.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/strips.js"></script>
+<script src="js/footer-clouds.js"></script>
+<script src="js/page-transitions.js"></script>
+<script src="js/vendor/three.min.js"></script>
+<script src="js/origin3d.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/footer-harp.js"></script>
+
+</body>
+</html>
