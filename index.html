@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theos — design with intelligence</title>
+<meta name="description" content="Theos is an AI-first digital product studio. Strategy, design, engineering and growth, delivered as one discipline. New Delhi and London.">
+<meta property="og:title" content="Theos — design with intelligence">
+<meta property="og:description" content="An AI-first digital product studio. New Delhi and London.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23F36D1F'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/colors.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/typography.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/radius.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/shadows.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/motion.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/layout.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/tokens/base.css">
+<link rel="stylesheet" href="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/styles.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.body.classList.add('has-js-intro');</script>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="nav-logo" href="#hero" aria-label="Theos home">
+      <svg viewBox="0 0 969 265" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="theos">
+        <rect width="60" height="60" fill="#F36D1F"></rect>
+        <path d="M180 140H60C60 173.137 86.8629 200 120 200H180V260C114.616 260 81.9238 260 57.2822 246.545C38.7743 236.439 23.5612 221.226 13.4551 202.718C-0.000232574 178.076 0 145.384 0 80H180V140Z" fill="currentColor"></path>
+        <path d="M200.298 260.002V0L258.486 0.00122462V260.002H200.298ZM320.404 260.002V164.514H378.592V260.002H320.404ZM320.404 164.514C320.404 154.567 319.285 146.734 317.047 141.015C314.809 135.047 311.576 130.695 307.349 127.96C303.122 125.224 298.148 123.732 292.429 123.484C281.239 123.235 272.784 126.343 267.065 132.809C261.346 139.025 258.486 148.599 258.486 161.53H240.955C240.955 141.885 243.939 125.224 249.907 111.548C255.875 97.6223 263.957 87.054 274.152 79.8426C284.596 72.6313 296.532 69.0256 309.96 69.0256C325.129 69.0256 337.811 72.134 348.006 78.3506C358.201 84.3186 365.786 93.5193 370.759 105.953C375.981 118.386 378.592 134.301 378.592 153.697V164.514H320.404Z" fill="currentColor"></path>
+        <path d="M496.16 264.478C476.764 264.478 459.606 260.375 444.686 252.169C429.766 243.963 418.078 232.524 409.624 217.853C401.169 203.181 396.942 186.148 396.942 166.752C396.942 147.356 401.169 130.322 409.624 115.651C418.078 100.979 429.766 89.5406 444.686 81.3346C459.854 73.1286 477.261 69.0256 496.906 69.0256C514.561 69.0256 530.476 73.253 544.65 81.7076C558.824 90.1623 570.014 102.844 578.22 119.754C586.674 136.414 590.902 157.054 590.902 181.672H450.654L456.995 174.585C456.995 183.039 458.735 190.499 462.217 196.965C465.698 203.43 470.547 208.403 476.764 211.885C482.98 215.117 489.943 216.734 497.652 216.734C506.852 216.734 514.561 214.744 520.778 210.766C526.994 206.538 531.346 201.316 533.833 195.1L585.68 212.631C580.706 224.567 573.619 234.389 564.419 242.098C555.467 249.806 545.147 255.526 533.46 259.256C521.772 262.737 509.339 264.478 496.16 264.478ZM458.487 150.713L452.519 142.88H536.071L530.476 150.713C530.476 141.263 528.611 133.928 524.881 128.706C521.151 123.235 516.55 119.256 511.08 116.77C505.858 114.283 500.511 113.04 495.041 113.04C489.57 113.04 483.975 114.283 478.256 116.77C472.785 119.256 468.06 123.235 464.082 128.706C460.352 133.928 458.487 141.263 458.487 150.713Z" fill="currentColor"></path>
+        <path d="M698.165 264.478C678.521 264.478 661.238 260.375 646.318 252.169C631.398 243.714 619.587 232.151 610.883 217.48C602.429 202.808 598.201 185.899 598.201 166.752C598.201 147.604 602.304 130.695 610.51 116.024C618.965 101.352 630.652 89.9136 645.572 81.7076C660.741 73.253 677.899 69.0256 697.046 69.0256C716.691 69.0256 733.973 73.253 748.893 81.7076C764.062 89.9136 775.749 101.352 783.955 116.024C792.41 130.695 796.637 147.604 796.637 166.752C796.637 185.899 792.41 202.808 783.955 217.48C775.749 232.151 764.186 243.714 749.266 252.169C734.346 260.375 717.313 264.478 698.165 264.478ZM698.165 210.766C705.625 210.766 712.215 208.901 717.934 205.171C723.902 201.441 728.503 196.343 731.735 189.878C735.217 183.164 736.957 175.455 736.957 166.752C736.957 158.048 735.217 150.464 731.735 143.999C728.503 137.285 723.902 132.063 717.934 128.333C711.966 124.603 705.128 122.738 697.419 122.738C689.711 122.738 682.872 124.603 676.904 128.333C670.936 132.063 666.212 137.285 662.73 143.999C659.498 150.464 657.881 158.048 657.881 166.752C657.881 175.455 659.498 183.164 662.73 189.878C666.212 196.343 670.936 201.441 676.904 205.171C683.121 208.901 690.208 210.766 698.165 210.766Z" fill="currentColor"></path>
+        <path d="M887.661 264.478C875.476 264.478 864.038 262.737 853.345 259.256C842.901 255.774 833.7 250.801 825.743 244.336C818.034 237.622 812.315 229.54 808.585 220.091L856.702 199.949C859.935 206.165 864.411 210.89 870.13 214.123C875.849 217.107 881.693 218.599 887.661 218.599C893.629 218.599 898.354 217.604 901.835 215.615C905.316 213.377 907.057 210.393 907.057 206.663C907.057 202.684 905.316 199.576 901.835 197.338C898.354 195.1 893.256 193.11 886.542 191.37L870.13 187.64C852.972 183.164 839.668 175.704 830.219 165.26C820.77 154.816 816.045 142.755 816.045 129.079C816.045 109.931 822.635 95.1356 835.814 84.6916C848.993 74.2476 867.27 69.0256 890.645 69.0256C904.073 69.0256 915.76 70.8906 925.707 74.6206C935.902 78.102 944.357 83.0753 951.071 89.5406C958.034 95.7573 963.007 102.969 965.991 111.175L919.739 130.571C917.998 125.597 914.393 121.743 908.922 119.008C903.451 116.272 897.608 114.905 891.391 114.905C885.92 114.905 881.693 116.148 878.709 118.635C875.725 121.121 874.233 124.23 874.233 127.96C874.233 130.944 875.974 133.555 879.455 135.793C883.185 137.782 888.531 139.647 895.494 141.388L915.263 146.237C926.95 149.221 936.773 153.821 944.73 160.038C952.687 166.006 958.655 173.093 962.634 181.299C966.613 189.256 968.602 197.835 968.602 207.036C968.602 218.972 965.121 229.291 958.158 237.995C951.444 246.449 941.995 253.039 929.81 257.764C917.625 262.24 903.576 264.478 887.661 264.478Z" fill="currentColor"></path>
+      </svg>
+    </a>
+    
+    <div class="nav-right">
+      <button class="icon-btn" id="sound-toggle" type="button" aria-label="Toggle ambient sound">
+        <svg class="on" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 5.5V9.5H4.5L8 12.5V2.5L4.5 5.5H2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M10.5 5C11.4 5.9 11.4 9.1 10.5 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <svg class="off" width="15" height="15" viewBox="0 0 15 15" fill="none" style="display:none"><path d="M2 5.5V9.5H4.5L8 12.5V2.5L4.5 5.5H2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M10.5 5.5L13.5 9.5M13.5 5.5L10.5 9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+      </button>
+      <a class="btn btn-solid btn-sm magnetic" href="contact.html">Start a project</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section id="hero" data-screen-label="01 Hero">
+    <div class="wrap hero-copy">
+      <p class="t-micro rv rv1"><span class="sq"></span>AI-first digital product studio</p>
+      <h1 class="rv rv2">Design with <span id="cycle-word">intelligence.</span></h1>
+      <p class="hero-sub rv rv3">Theos partners with ambitious businesses to design, build, automate and grow. One team, one standard, not four vendors.</p>
+      <div class="hero-cta rv rv4">
+        <a class="btn btn-solid magnetic" data-cursor="Book" href="contact.html">Book a discovery call</a>
+        <a class="btn btn-ghost magnetic" href="#work">See the work<span class="arr">&rarr;</span></a>
+      </div>
+      <div class="hero-meta rv rv4">
+        <span>New Delhi &middot; London</span>
+        <span class="scroll-hint"><span class="tick"></span>Hold to blast &middot; touch the wires</span>
+        <span>Est. by Sagar KD</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy" data-screen-label="02 Philosophy">
+    <div class="phil-track">
+      <div class="phil-pin">
+        <div class="wrap phil-inner">
+          <p class="phil-line">
+            <span data-seg>Design should solve problems. Technology should simplify complexity. Intelligence should sharpen craft,</span>
+            <span data-seg data-em>not replace it.</span>
+          </p>
+          <div class="phil-foot">
+            <span class="t-micro">Strategy first</span>
+            <span class="t-micro">One integrated team</span>
+            <span class="t-micro">Outcomes, not deliverables</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" data-screen-label="04 Work" data-strips="#efedea">
+    <div class="wh-track">
+      <div class="wh-pin">
+        <div class="wh-rail">
+          <div class="wh-panel wh-intro">
+            <p class="t-micro"><span class="sq"></span>Selected work</p>
+            <h2>Selected work<br>&amp; explorations.</h2>
+            <p class="wh-sub">Four shipped projects. Six concepts in the lab. The work argues for itself.</p>
+            <a class="wh-viewall" href="work.html">View all projects<span>&rarr;</span></a>
+            <p class="wh-hint">Keep scrolling <span class="wh-hint-arr">&rarr;</span></p>
+          </div>
+        <div class="wh-sep" aria-hidden="true"><span></span></div><div class="wh-panel wh-proj">
+          <div class="wh-media" data-cursor="View">
+            <image-slot id="work-sofy" shape="rect" placeholder="Drop Sofy imagery"></image-slot>
+          </div>
+          <div class="wh-caption">
+            <div>
+              <p class="wh-cat">01 &mdash; Mobile app · Healthcare · 2025</p>
+              <h3>Sofy</h3>
+              <p class="wh-desc">A women&rsquo;s health platform that makes complex health information approachable.</p>
+            </div>
+            <button class="case-ask" type="button" data-ask="Tell me about the Sofy project">Explore with Theos<span>&rarr;</span></button>
+          </div>
+        </div>
+        <div class="wh-sep" aria-hidden="true"><span></span></div><div class="wh-panel wh-proj">
+          <div class="wh-media" data-cursor="View">
+            <image-slot id="work-motherson" shape="rect" placeholder="Drop Motherson imagery"></image-slot>
+          </div>
+          <div class="wh-caption">
+            <div>
+              <p class="wh-cat">02 &mdash; Enterprise SaaS · Manufacturing · 2025</p>
+              <h3>Motherson</h3>
+              <p class="wh-desc">A supplier portal that modernizes enterprise manufacturing workflows.</p>
+            </div>
+            <button class="case-ask" type="button" data-ask="Tell me about the Motherson supplier portal">Explore with Theos<span>&rarr;</span></button>
+          </div>
+        </div>
+        <div class="wh-sep" aria-hidden="true"><span></span></div><div class="wh-panel wh-proj">
+          <div class="wh-media" data-cursor="View">
+            <image-slot id="work-intrude" shape="rect" placeholder="Drop Intrude imagery"></image-slot>
+          </div>
+          <div class="wh-caption">
+            <div>
+              <p class="wh-cat">03 &mdash; E-commerce · Luxury brand · 2024</p>
+              <h3>Intrude</h3>
+              <p class="wh-desc">A premium Indian streetwear label with a distinctive digital experience.</p>
+            </div>
+            <button class="case-ask" type="button" data-ask="Tell me about the Intrude project">Explore with Theos<span>&rarr;</span></button>
+          </div>
+        </div>
+        <div class="wh-sep" aria-hidden="true"><span></span></div><div class="wh-panel wh-proj">
+          <div class="wh-media" data-cursor="View">
+            <image-slot id="work-segreto" shape="rect" placeholder="Drop Segreto imagery"></image-slot>
+          </div>
+          <div class="wh-caption">
+            <div>
+              <p class="wh-cat">04 &mdash; Brand identity · Hospitality · 2024</p>
+              <h3>Segreto</h3>
+              <p class="wh-desc">A premium nightlife identity, consistent across every guest touchpoint.</p>
+            </div>
+            <button class="case-ask" type="button" data-ask="Tell me about the Segreto project">Explore with Theos<span>&rarr;</span></button>
+          </div>
+        </div>
+          <div class="wh-sep" aria-hidden="true"><span></span></div><div class="wh-panel wh-outro">
+            <p class="wh-outro-line">Discover the complete collection of digital experiences, brands and platforms.</p>
+            <a class="wh-viewall" href="work.html">View all projects<span>&rarr;</span></a>
+          </div>
+        </div>
+        <div class="wh-cover" aria-hidden="true"></div>
+        <div class="wh-bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities" data-screen-label="03 Services">
+    <div class="svc-track">
+      <div class="svc-pin">
+        <div class="svc-dark" aria-hidden="true"></div>
+        <div class="svc-smoke a" aria-hidden="true"></div>
+        <div class="svc-smoke b" aria-hidden="true"></div>
+        <canvas id="cap-gl" aria-hidden="true"></canvas>
+        <div class="svc-flash" aria-hidden="true"></div>
+        <div class="svc-headwrap">
+          <p class="svc-head t-micro">Our services</p>
+          <p class="svc-sub">Everything a digital product needs, under one roof.</p>
+        </div>
+        <div class="svc-words">
+          <span class="svc-word">strategy</span>
+          <span class="svc-word">design</span>
+          <span class="svc-word">engineering</span>
+          <span class="svc-word">growth</span>
+        </div>
+        <div class="svc-cards" aria-hidden="false">
+          <div class="svc-card sc1">
+            <h3>Strategy</h3>
+            <p>Product strategy &middot; UX research &middot; UX audits &middot; Digital transformation &middot; AI adoption</p>
+          </div>
+          <div class="svc-card sc2">
+            <h3>Design</h3>
+            <p>Product design &middot; Websites &middot; Brand identity &middot; Design systems &middot; Packaging &middot; Motion</p>
+          </div>
+          <div class="svc-card sc3">
+            <h3>Engineering</h3>
+            <p>Web applications &middot; Mobile apps &middot; Shopify &middot; Custom software &middot; APIs</p>
+          </div>
+          <div class="svc-card sc4">
+            <h3>Growth</h3>
+            <p>AI agents &middot; Workflow automation &middot; SEO &middot; Performance marketing</p>
+          </div>
+        </div>
+        <p class="svc-foot t-micro"><span class="sq"></span>Four disciplines. One standard.</p>
+      </div>
+    </div>
+    <div class="svc-fallback wrap">
+      <div class="svc-card"><h3>Strategy</h3><p>Product strategy &middot; UX research &middot; UX audits &middot; Digital transformation &middot; AI adoption</p></div>
+      <div class="svc-card"><h3>Design</h3><p>Product design &middot; Websites &middot; Brand identity &middot; Design systems &middot; Packaging &middot; Motion</p></div>
+      <div class="svc-card"><h3>Engineering</h3><p>Web applications &middot; Mobile apps &middot; Shopify &middot; Custom software &middot; APIs</p></div>
+      <div class="svc-card"><h3>Growth</h3><p>AI agents &middot; Workflow automation &middot; SEO &middot; Performance marketing</p></div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="04 Process" data-strips="#17140f">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <h2 class="rl">How the work gets made.</h2>
+        <p class="lede rl">Four phases. No stage is skipped. Nothing ships without QA.</p>
+      </div>
+    </div>
+    <div class="wrap procs">
+      <article class="procs-card" style="--pi:0;" data-reveal>
+        <div class="procs-idx">
+          <span class="procs-num rl">01</span>
+          <span class="procs-ph t-micro rl">Phase 01 / 04</span>
+        </div>
+        <div class="procs-main">
+          <h3 class="rl">Discover</h3>
+          <p class="rl">We understand the business before touching the product. Stakeholders, users, constraints, success metrics — mapped before a single screen exists.</p>
+          <div class="procs-tags rl"><span>Stakeholder interviews</span><span>User research</span><span>Constraints</span><span>Success metrics</span></div>
+        </div>
+        <div class="procs-meter" aria-hidden="true"><i style="--pf:0.25;"></i></div>
+      </article>
+      <article class="procs-card" style="--pi:1;" data-reveal>
+        <div class="procs-idx">
+          <span class="procs-num rl">02</span>
+          <span class="procs-ph t-micro rl">Phase 02 / 04</span>
+        </div>
+        <div class="procs-main">
+          <h3 class="rl">Design</h3>
+          <p class="rl">Research becomes structure. Structure becomes interface. Every decision is intentional, testable and traceable back to the problem.</p>
+          <div class="procs-tags rl"><span>Flows</span><span>Design systems</span><span>Interface</span><span>Prototypes</span></div>
+        </div>
+        <div class="procs-meter" aria-hidden="true"><i style="--pf:0.5;"></i></div>
+      </article>
+      <article class="procs-card" style="--pi:2;" data-reveal>
+        <div class="procs-idx">
+          <span class="procs-num rl">03</span>
+          <span class="procs-ph t-micro rl">Phase 03 / 04</span>
+        </div>
+        <div class="procs-main">
+          <h3 class="rl">Build</h3>
+          <p class="rl">Design and engineering work as one team, so nothing is lost in translation. AI accelerates the repeatable; craft owns the rest.</p>
+          <div class="procs-tags rl"><span>Web</span><span>Mobile</span><span>AI systems</span><span>QA</span></div>
+        </div>
+        <div class="procs-meter" aria-hidden="true"><i style="--pf:0.75;"></i></div>
+      </article>
+      <article class="procs-card" style="--pi:3;" data-reveal>
+        <div class="procs-idx">
+          <span class="procs-num rl">04</span>
+          <span class="procs-ph t-micro rl">Phase 04 / 04</span>
+        </div>
+        <div class="procs-main">
+          <h3 class="rl">Grow</h3>
+          <p class="rl">Launch is the start. We measure, automate and optimize for outcomes that compound quarter after quarter.</p>
+          <div class="procs-tags rl"><span>SEO</span><span>Automation</span><span>Performance</span><span>Iteration</span></div>
+        </div>
+        <div class="procs-meter" aria-hidden="true"><i style="--pf:1;"></i></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="clients" data-screen-label="05 Clients" data-strips="#ffffff">
+    <div class="wrap client-inner">
+      <div class="sec-head client-head" data-reveal>
+        <h2 class="rl">Client stories.</h2>
+        <p class="lede rl">Great work is built through partnership. Here is what clients say.</p>
+      </div>
+      <div class="client-rule" aria-hidden="true"></div>
+      <div class="client-stage">
+        <div class="client-side">
+          <div class="client-tabs" role="tablist" aria-label="Client stories">
+            <button class="ct on" type="button" data-i="0" role="tab" aria-selected="true">Motherson<span class="ct-arr">&rarr;</span></button>
+            <button class="ct" type="button" data-i="1" role="tab" aria-selected="false">Sofy<span class="ct-arr">&rarr;</span></button>
+            <button class="ct" type="button" data-i="2" role="tab" aria-selected="false">Intrude<span class="ct-arr">&rarr;</span></button>
+          </div>
+          <div class="cq-nav">
+            <button class="icon-btn" id="cq-prev" type="button" aria-label="Previous story">&larr;</button>
+            <span class="cq-idx" id="cq-idx">01 / 03</span>
+            <button class="icon-btn" id="cq-next" type="button" aria-label="Next story">&rarr;</button>
+          </div>
+        </div>
+        <div class="client-view">
+          <span class="cq-num" id="cq-num" aria-hidden="true">01</span>
+          <blockquote class="cq-text" id="cq-text">They understood the business before they touched the product. The portal shipped ahead of our own estimate.</blockquote>
+          <p class="cq-byline" id="cq-by">Program lead &mdash; Motherson &middot; Enterprise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intelligence" data-screen-label="05 Intelligence" data-strips="#161311">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <h2 class="rl">Meet Theos AI.</h2>
+        <p class="lede rl">The studio&rsquo;s resident intelligence. Ask it.</p>
+      </div>
+      <div class="intel-grid">
+        <div class="intel-copy" data-reveal>
+          <div class="intel-points rl">
+            <div class="intel-point"><span class="k">01</span><p class="t"><strong>AI agents</strong> designed around real workflows.</p></div>
+            <div class="intel-point"><span class="k">02</span><p class="t"><strong>Automation</strong> for the work that repeats.</p></div>
+            <div class="intel-point"><span class="k">03</span><p class="t"><strong>Knowledge systems</strong> a team can actually search.</p></div>
+          </div>
+        </div>
+        <div class="companion-scope" data-reveal>
+          <div class="rl" id="companion-mount"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audit" data-screen-label="06 Audit" data-strips="#0f0e0c">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <h2 class="rl">Try the intelligence.</h2>
+        <p class="lede rl">A free instant audit of your website. If this is the free read, imagine the paid work.</p>
+      </div>
+    </div>
+    <div class="wrap audit-wrap">
+      <div id="audit-mount"></div>
+    </div>
+  </section>
+
+
+
+  <section id="insights" data-screen-label="07 Insights" data-strips="#f3f0ec">
+    <div class="ins-track">
+      <div class="ins-pin">
+        <canvas class="ins-bg" aria-hidden="true"></canvas>
+        <div class="wrap ins-inner">
+          <header class="ins-hero">
+            <p class="t-micro"><span class="sq"></span>Insights</p>
+            <h2>Thinking, published.</h2>
+            <p class="ins-sub">Research, systems, product thinking, AI and digital craftsmanship.</p>
+            <div class="ins-search" role="search">
+              <input type="search" placeholder="Search the intelligence&hellip;" aria-label="Search articles">
+              <div class="ins-chips">
+                <button class="ins-chip" type="button" data-cat="ux">UX strategy</button>
+                <button class="ins-chip" type="button" data-cat="ai">AI product design</button>
+                <button class="ins-chip" type="button" data-cat="future">Future interfaces</button>
+              </div>
+            </div>
+          </header>
+          <div class="ins-cards">
+            <article class="ins-card featured" data-cat="ux" data-tags="ux strategy conversion first impressions hierarchy trust performance">
+              <div class="ins-media"><canvas class="ins-art" aria-label="Abstract light trails converging on a single point — visual metaphor for first impressions"></canvas></div>
+              <div class="ins-copy">
+                <p class="ins-meta"><span class="cat">UX strategy</span><span>8 min read</span><span>June 2026</span></p>
+                <h3>Why most business websites fail before users even scroll.</h3>
+                <p class="ins-sum">The verdict on your website is reached in milliseconds, above the fold, before a single scroll. What decides it &mdash; and what to do about it.</p>
+                <button class="ins-read" type="button" data-read="article-fail">Read the article<span>&rarr;</span></button>
+              </div>
+            </article>
+            <article class="ins-card" data-cat="ai" data-tags="ai product design human trust transparency onboarding conversational">
+              <div class="ins-media"><canvas class="ins-art" aria-label="Organic node bloom — visual metaphor for humane AI systems"></canvas></div>
+              <div class="ins-copy">
+                <p class="ins-meta"><span class="cat">AI product design</span><span>10 min read</span><span>May 2026</span></p>
+                <h3>Designing AI products that feel human.</h3>
+                <p class="ins-sum">Trust is the interface. How transparency, feedback and restraint turn a capable model into a product people rely on.</p>
+                <button class="ins-read" type="button" data-read="article-human">Read the article<span>&rarr;</span></button>
+              </div>
+            </article>
+            <article class="ins-card" data-cat="future" data-tags="future interfaces spatial ambient voice multimodal webgl immersive">
+              <div class="ins-media"><canvas class="ins-art" aria-label="Receding spatial frames — visual metaphor for interfaces beyond screens"></canvas></div>
+              <div class="ins-copy">
+                <p class="ins-meta"><span class="cat">Future interfaces</span><span>12 min read</span><span>April 2026</span></p>
+                <h3>The future of UX: beyond screens.</h3>
+                <p class="ins-sum">Screens were a phase. Spatial computing, ambient interfaces and AI companions are redrawing where products live.</p>
+                <button class="ins-read" type="button" data-read="article-beyond">Read the article<span>&rarr;</span></button>
+              </div>
+            </article>
+          </div>
+          <div class="ins-foot">
+            <div class="ins-prog" aria-hidden="true"><i></i></div>
+            <a class="btn btn-ghost btn-sm magnetic" href="insights.html">View all insights<span class="arr">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- article bodies: semantic, crawlable, shown in reading mode -->
+    <div class="ins-articles" hidden>
+      <article id="article-fail" lang="en">
+        <p class="t-micro">UX strategy &middot; 8 min read &middot; Theos team</p>
+        <h2>Why most business websites fail before users even scroll.</h2>
+        <p>A visitor forms a judgment of a website in under a tenth of a second. That judgment &mdash; credible or not, premium or not, for me or not &mdash; is made above the fold, before any scrolling happens. Based on Theos design practice across healthcare, enterprise and consumer brands, most conversion problems are first-impression problems wearing a disguise.</p>
+        <h3>What decides the first impression?</h3>
+        <p>Three things, in order: visual hierarchy, perceived performance, and trust signals. Hierarchy tells the eye where to go. Performance tells the brain the company is competent. Trust signals tell the gut it is safe to continue. A site can have excellent content and still fail all three in the first viewport.</p>
+        <h3>Why does cognitive load kill conversion?</h3>
+        <p>Every competing headline, badge, animation and menu item is a small tax on attention. The tax compounds. When the first viewport asks a visitor to process more than one idea, the most common response is not a wrong choice &mdash; it is no choice. The back button is the cheapest decision available.</p>
+        <p>The fix is editorial discipline: one dominant statement, one primary action, and secondary material pushed below the fold. This is the same discipline we apply in our own <a href="services.html">product design work</a>.</p>
+        <h3>How fast is fast enough?</h3>
+        <p>Perceived speed matters more than measured speed. A page that renders its headline and hero instantly feels fast even while images stream in behind. Aim for a Largest Contentful Paint under 2.5 seconds on mid-range mobile; past 3 seconds, bounce probability climbs steeply.</p>
+        <h3>Key takeaways</h3>
+        <p>Say one thing above the fold. Make the primary action unmistakable. Render the message before the decoration. Treat contrast and focus states as conversion features, not compliance chores. And measure the first viewport separately from the rest of the page &mdash; it does most of the work.</p>
+        <p>Want a specific read on your own site? <a href="index.html#audit">Run the free Theos AI audit</a>, or see how this thinking shows up in <a href="work.html">our case studies</a>. When you are ready, <a href="contact.html">book a discovery call</a>.</p>
+      </article>
+      <article id="article-human" lang="en">
+        <p class="t-micro">AI product design &middot; 10 min read &middot; Theos team</p>
+        <h2>Designing AI products that feel human.</h2>
+        <p>An AI product is a relationship, not a feature. The model supplies capability; the design supplies trust. Based on Theos design practice building AI agents and automation for client teams, the products that survive contact with real users share one property: they are honest about what they are doing.</p>
+        <h3>What makes an AI interface trustworthy?</h3>
+        <p>Transparency of state. Users forgive a system that says it is thinking, uncertain, or wrong. They abandon a system that is confidently opaque. Show progress as legible stages, not spinners. Attribute answers to sources when they exist. Make "I don't know" a designed state, not an error.</p>
+        <h3>Why do feedback loops matter more than accuracy?</h3>
+        <p>No model is right every time. What users remember is whether correcting the system was effortless. A visible edit, an undo, a thumbs-down that observably changes behavior &mdash; these convert failure moments into ownership moments. Products without repair loops burn trust at exactly the moments trust is tested.</p>
+        <h3>How should AI products onboard?</h3>
+        <p>By doing, not touring. The best onboarding is a first task completed in under a minute with the AI visibly assisting. Suggested prompts beat empty text boxes. Defaults beat configuration. The system should demonstrate its range gradually, the way a good colleague reveals competence &mdash; through work, not claims.</p>
+        <h3>Where does restraint come in?</h3>
+        <p>Not everything should be conversational. Chat is a poor interface for comparison, spatial arrangement and repeated operations. The craft is knowing when the AI should be a colleague in the room and when it should be plumbing behind the wall. We design both &mdash; see <a href="services.html">AI &amp; automation services</a>.</p>
+        <h3>Key takeaways</h3>
+        <p>Make state visible. Design the repair loop before the happy path. Onboard through a real task. Use conversation only where conversation wins. And measure trust &mdash; retention after a failure is the honest metric.</p>
+        <p>Building something with AI at the core? <a href="contact.html">Talk to the studio</a> or explore <a href="work.html">recent work</a>.</p>
+      </article>
+      <article id="article-beyond" lang="en">
+        <p class="t-micro">Future interfaces &middot; 12 min read &middot; Theos team</p>
+        <h2>The future of UX: beyond screens.</h2>
+        <p>The rectangle is not the destination. For forty years, interface design has meant arranging pixels inside a bounded frame. Spatial computing, ambient systems and AI companions are dissolving that frame &mdash; and the design discipline is expanding to match.</p>
+        <h3>What is spatial computing changing?</h3>
+        <p>Distance, scale and place become design materials. An interface that lives in a room must respect the room: occlusion, lighting, the social fact of other people. The flat design system gives way to a physical one &mdash; materials, weight and light &mdash; which is why studios with 3D and WebGL craft are positioned for what comes next.</p>
+        <h3>What are ambient interfaces?</h3>
+        <p>Systems that act without being operated. A thermostat that has learned the household. A workflow that files the invoice before anyone opens the app. The UX question shifts from "is this screen clear?" to "does this system deserve the autonomy it has taken?" Ambient design is trust design at its purest.</p>
+        <h3>How do AI companions change the model?</h3>
+        <p>The interface becomes a colleague with memory. Continuity &mdash; the sense that the system knows the history of the work &mdash; replaces navigation as the core experience. Products organized around a knowing companion need fewer menus and better manners.</p>
+        <h3>Does the web stay relevant?</h3>
+        <p>More than ever. WebGL and WebGPU put real-time 3D in the browser with no install. The web is becoming the delivery layer for immersive product experiences &mdash; the same technology rendering this website's titanium monolith. The skills transfer directly.</p>
+        <h3>Key takeaways</h3>
+        <p>Learn physical material logic, not just layout. Treat autonomy as a designed permission. Build memory and continuity into the product model. Prototype in real time 3D early. The frame is dissolving &mdash; the craft is not.</p>
+        <p>Exploring what this means for your product? <a href="services.html">See our capabilities</a> or <a href="contact.html">start the conversation</a>.</p>
+      </article>
+    </div>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+      {"@type":"Organization","@id":"https://theos.design/#org","name":"Theos","url":"https://theos.design","email":"hello@theos.design","logo":"https://theos.design/assets/logo-light.svg","sameAs":["https://www.instagram.com/theosdesignstudio","https://linkedin.com/company/theosdesign"],"founder":{"@type":"Person","name":"Sagar KD"},"location":[{"@type":"Place","name":"New Delhi, India"},{"@type":"Place","name":"London, United Kingdom"}]},
+      {"@type":"BlogPosting","headline":"Why most business websites fail before users even scroll","articleSection":"UX strategy","timeRequired":"PT8M","datePublished":"2026-06-10","author":{"@type":"Organization","@id":"https://theos.design/#org"},"publisher":{"@id":"https://theos.design/#org"},"description":"First impressions, cognitive load, trust signals, visual hierarchy and performance — what decides a website's fate above the fold.","mainEntityOfPage":"https://theos.design/#insights"},
+      {"@type":"BlogPosting","headline":"Designing AI products that feel human","articleSection":"AI product design","timeRequired":"PT10M","datePublished":"2026-05-14","author":{"@type":"Organization","@id":"https://theos.design/#org"},"publisher":{"@id":"https://theos.design/#org"},"description":"Conversational interfaces, AI transparency, feedback loops, trust and onboarding — how design turns capable models into reliable products.","mainEntityOfPage":"https://theos.design/#insights"},
+      {"@type":"BlogPosting","headline":"The future of UX: beyond screens","articleSection":"Future interfaces","timeRequired":"PT12M","datePublished":"2026-04-22","author":{"@type":"Organization","@id":"https://theos.design/#org"},"publisher":{"@id":"https://theos.design/#org"},"description":"Spatial computing, ambient interfaces, multimodal interaction and AI companions — where product experiences live next.","mainEntityOfPage":"https://theos.design/#insights"}
+    ]}
+    </script>
+  </section>
+
+  <!-- reading mode overlay -->
+  <div id="ins-reader" role="dialog" aria-modal="true" aria-label="Article reader">
+    <div class="rd-panel">
+      <div class="rd-prog" aria-hidden="true"><i></i></div>
+      <div class="rd-top">
+        <button class="rd-copy" type="button">Copy link</button>
+        <button class="icon-btn rd-close" type="button" aria-label="Close article">&#10005;</button>
+      </div>
+      <div class="rd-cols">
+        <nav class="rd-toc" aria-label="Table of contents"></nav>
+        <div class="rd-scroll"><div class="rd-body"></div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="presence" data-screen-label="07 Presence">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <h2 class="rl">Two studios. One team.</h2>
+        <p class="lede rl">New Delhi and London, working with clients worldwide.</p>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <span class="mtxt">design with intelligence <em>&#9632;</em> theos <em>&#9632;</em> new delhi <em>&#9632;</em> london <em>&#9632;</em> design with intelligence <em>&#9632;</em> theos</span>
+    </div>
+    <div class="wrap">
+      <div class="presence-grid" data-reveal>
+        <div class="city rl">
+          <p class="cn">New Delhi</p>
+          <p class="ct" id="clock-delhi">--:--:--</p>
+          <p class="cz">India &middot; IST</p>
+        </div>
+        <div class="city rl">
+          <p class="cn">London</p>
+          <p class="ct" id="clock-london">--:--:--</p>
+          <p class="cz">United Kingdom &middot; GMT/BST</p>
+        </div>
+      </div>
+      <p class="founder-line" data-reveal><span class="rl">Founded by <strong>Sagar KD</strong>. Working with clients worldwide.</span></p>
+    </div>
+  </section>
+
+  <section id="cta" data-screen-label="08 Contact">
+    <div class="wrap" data-reveal>
+      <h2 class="rl">Ready to build what&rsquo;s next.</h2>
+      <p class="sub rl">Tell us about the problem. We will bring the questions.</p>
+      <div class="hero-cta rl">
+        <a class="btn btn-solid magnetic" data-cursor="Book" href="contact.html">Book a discovery call</a>
+      </div>
+      <p class="mail rl">Or write to <a href="mailto:hello@theos.design">hello@theos.design</a></p>
+    </div>
+  </section>
+</main>
+
+<footer data-screen-label="09 Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="fh"><span class="sq" style="display:inline-block;width:8px;height:8px;background:var(--ember);margin-right:10px;"></span>Theos</p>
+        <p class="foot-desc">An AI-first digital product studio. Strategy, design, engineering and growth, delivered as one discipline.</p>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Studio</p>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#capabilities">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li>Careers<span class="soon">Opening soon</span></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Contact</p>
+        <ul>
+          <li><a href="mailto:hello@theos.design">hello@theos.design</a></li>
+          <li><a href="mailto:theosdesignstudio@gmail.com">theosdesignstudio@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/theosdesignstudio" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/theosdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <p class="fh">Newsletter</p>
+        <p class="foot-desc" style="margin-bottom:16px;">One considered email, occasionally. No noise.</p>
+        <form class="news-form" id="news-form">
+          <input type="email" placeholder="you@company.com" aria-label="Email address">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-mark foot-harp-wrap" aria-hidden="true">
+      <canvas class="foot-harp"></canvas>
+      <p class="harp-hint t-micro">Run your cursor across the wires</p>
+    </div>
+    <div class="foot-legal">
+      <span>&copy; <span id="year">2026</span> Theos. New Delhi &middot; London.</span>
+      <span><a href="https://theos.design" target="_blank" rel="noopener">theos.design</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/three.min.js"></script>
+<script src="js/vendor/react.production.min.js"></script>
+<script src="js/vendor/react-dom.production.min.js"></script>
+<script src="_ds/theos-design-system-e121a9cc-9e67-4db0-b8a8-e837cb23ccfe/_ds_bundle.js"></script>
+<script src="js/image-slot.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/work-horizontal.js"></script>
+<script src="js/services3d.js"></script>
+<script src="js/strips.js"></script>
+<script src="js/clients.js"></script>
+<script src="js/intel-bg.js"></script>
+<script src="js/footer-clouds.js"></script>
+<script src="js/page-transitions.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/footer-harp.js"></script>
+<script src="js/process.js"></script>
+<script src="js/insights.js"></script>
+<script src="js/hero3d.js"></script>
+<script src="js/audit.js"></script>
+<script src="js/companion.js"></script>
+</body>
+</html>
