@@ -1,0 +1,74 @@
+/*
+  THEOS — Typography Tokens
+  ---------------------------------------------------------------
+  One family, weighted deliberately — Geist for both display and body,
+  Geist Mono for anything literal (code, data, timestamps, AI process
+  traces). A single face keeps the system calm; hierarchy is built from
+  size, weight and spacing rather than switching typefaces.
+*/
+
+:root {
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---------------------------------------------------------------
+     Scale — a 1.25–1.33 hybrid ratio, biased toward large display
+     sizes (luxury, confident) and a generous, readable body size.
+     Values are the desktop reference; responsive rules in layout.css
+     step display/heading sizes down at narrower breakpoints.
+     --------------------------------------------------------------- */
+
+  --text-display-1: 96px;   /* hero statements, one per page */
+  --text-display-2: 72px;
+  --text-heading-1: 56px;   /* section titles */
+  --text-heading-2: 40px;
+  --text-heading-3: 32px;
+  --text-title-1: 24px;     /* card / module titles */
+  --text-title-2: 20px;
+  --text-body-lg: 18px;
+  --text-body: 16px;        /* default running text */
+  --text-caption: 13px;
+  --text-micro: 11px;       /* labels, timestamps, eyebrow tags */
+  --text-button: 15px;
+
+  /* Line heights — tight for display (type as image), generous for body */
+  --leading-display: 1.02;
+  --leading-heading: 1.1;
+  --leading-title: 1.25;
+  --leading-body: 1.6;
+  --leading-caption: 1.45;
+
+  /* Letter spacing — negative on large display type to keep it dense
+     and architectural; slightly open on small caps / micro labels for
+     legibility at size. */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-title: -0.01em;
+  --tracking-body: 0em;
+  --tracking-micro: 0.04em;
+}
+
+/* ---------------------------------------------------------------
+   Utility classes — the canonical way to apply the scale. Prefer
+   these over ad-hoc font-size declarations so the system stays a
+   single source of truth.
+   --------------------------------------------------------------- */
+.t-display-1 { font: var(--weight-semibold) var(--text-display-1)/var(--leading-display) var(--font-sans); letter-spacing: var(--tracking-display); }
+.t-display-2 { font: var(--weight-semibold) var(--text-display-2)/var(--leading-display) var(--font-sans); letter-spacing: var(--tracking-display); }
+.t-heading-1 { font: var(--weight-semibold) var(--text-heading-1)/var(--leading-heading) var(--font-sans); letter-spacing: var(--tracking-heading); }
+.t-heading-2 { font: var(--weight-semibold) var(--text-heading-2)/var(--leading-heading) var(--font-sans); letter-spacing: var(--tracking-heading); }
+.t-heading-3 { font: var(--weight-medium) var(--text-heading-3)/var(--leading-heading) var(--font-sans); letter-spacing: var(--tracking-heading); }
+.t-title-1 { font: var(--weight-medium) var(--text-title-1)/var(--leading-title) var(--font-sans); letter-spacing: var(--tracking-title); }
+.t-title-2 { font: var(--weight-medium) var(--text-title-2)/var(--leading-title) var(--font-sans); letter-spacing: var(--tracking-title); }
+.t-body-lg { font: var(--weight-regular) var(--text-body-lg)/var(--leading-body) var(--font-sans); letter-spacing: var(--tracking-body); }
+.t-body { font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-sans); letter-spacing: var(--tracking-body); }
+.t-caption { font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans); letter-spacing: var(--tracking-body); }
+.t-micro { font: var(--weight-medium) var(--text-micro)/var(--leading-caption) var(--font-sans); letter-spacing: var(--tracking-micro); text-transform: uppercase; }
+.t-button { font: var(--weight-medium) var(--text-button)/1 var(--font-sans); letter-spacing: var(--tracking-body); }
+.t-mono { font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-mono); }

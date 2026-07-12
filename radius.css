@@ -1,0 +1,18 @@
+/*
+  THEOS — Radius Tokens
+  ---------------------------------------------------------------
+  "Rounded but architectural": corners are soft enough to feel human,
+  never so round the shape reads as a bubble/toy. Radius increases with
+  a surface's size and its distance from direct manipulation — small
+  controls stay crisp, large containers soften more.
+*/
+
+:root {
+  --radius-xs: 6px;    /* checkboxes, tags, chips */
+  --radius-sm: 10px;   /* buttons, inputs, small controls */
+  --radius-md: 14px;   /* list rows, compact cards */
+  --radius-lg: 20px;   /* cards, panels */
+  --radius-xl: 28px;   /* modals, hero panels, large surfaces */
+  --radius-2xl: 36px;  /* full-bleed feature panels */
+  --radius-full: 999px; /* pills, avatars, dots */
+}
